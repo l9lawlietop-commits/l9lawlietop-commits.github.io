@@ -39,3 +39,15 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("scrolled");
   }
 });
+const toggleBtn = document.getElementById("eventToggle");
+const eventDetails = document.getElementById("eventDetails");
+
+toggleBtn.addEventListener("click", () => {
+  eventDetails.classList.toggle("active");
+
+  if (eventDetails.classList.contains("active")) {
+    toggleBtn.textContent = "Hide Event Details";
+  } else {
+    toggleBtn.textContent = "View Event Details";
+  }
+});
